@@ -1,9 +1,8 @@
 # micropython
 Micro Python
 
-### MicroPython on ESP Using Jupyter Notebook on Ubnutu 18.04 LTS
-
-#### 1. Installing MicroPython:
+## GET STARTING
+### 1. Installing MicroPython:
 
 The first thing to be done with a fresh NodeMCU (or ESP32), is to erase what is loaded in its memory, “flashing” a new firmware, that will be the MicroPython interpreter.
 
@@ -97,8 +96,8 @@ If you are at REPL, use:
 \* REPL stands for “*Read Evaluate Print Loop”*, and is the name given to the interactive MicroPython prompt that you can access on the ESP8266. You can learn more about REPL [here](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/repl.html).
 
 
-
-#### 3. Installing Jupyter MicroPython Kernel
+## MicroPython on ESP Using Jupyter Notebook on Ubnutu 18.04 LTS
+### 3. Installing Jupyter MicroPython Kernel
 
 To interact with a MicroPython ESP8266 or ESP32 over its serial REPL, we will need to install a specific Jupyter Kernel.
 
