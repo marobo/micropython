@@ -93,13 +93,7 @@ From [Jupyter Documentation website](http://jupyter.org/documentation), we can l
 
 [Jupyter MicroPython Kernel](https://github.com/goatchurchprime/jupyter_micropython_kernel/)
 
-Once we have Python 3 installed on our machine, clone the repository to a directory using the shell command (ie on a command line):
-
-```
-git clone https://github.com/goatchurchprime/jupyter_micropython_kernel.git
-```
-
-Next, install the library (in editable mode) into Python3 using the shell command:
+Once we have Python 3 installed on our machine, Next, install the library  `jupyter_micropython_kernel` (in editable mode) into Python3 using the shell command:
 
 ```
 pip install -e jupyter_micropython_kernel
@@ -112,7 +106,7 @@ This creates a small file pointing to this directory in the python/../site-packa
 Install the kernel into Jupyter itself using the shell command:
 
 ```
-python -m jupyter_micropython_kernel.install
+pip install jupyter-client
 ```
 
 This creates the small file “.local/share/jupyter/kernels/micropython/kernel.json” that jupyter uses to reference it’s kernels.
