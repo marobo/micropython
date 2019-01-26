@@ -19,11 +19,9 @@ esp8266-20180511-v1.9.4.bin (Latest 01Jun18)
 
 (you can find details how to install the FW [here](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html#deploying-the-firmware))
 
-Then yu can replace the binary with new one you download por example:
+Then you can replace the binary with the new one you download por example:
+`esp8266-20180511-v1.9.4.bin` to `esp8266-20180511-v2.10.1.bin`
 
-```
-esp8266-20180511-v1.9.4.bin` to `esp8266-20180511-v2.10.1.bin`
-```
 
 B. The ideal is to create a directory where you will work with MicroPython. For example, in case of a mac, starting from your root directory then git clones this repository:
 
