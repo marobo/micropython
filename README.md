@@ -19,31 +19,46 @@ esp8266-20180511-v1.9.4.bin (Latest 01Jun18)
 
 (you can find details how to install the FW [here](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html#deploying-the-firmware))
 
-The ideal is to create a directory where you will work with MicroPython. For example, in case of a mac, starting from your root directory:
+Then yu can replace the binary with new one you download por example:
+
+```
+esp8266-20180511-v1.9.4.bin` to `esp8266-20180511-v2.10.1.bin`
+```
+
+B. The ideal is to create a directory where you will work with MicroPython. For example, in case of a mac, starting from your root directory then git clones this repository:
 
 ```
 cd Devel
 mkdir MicroPython
 cd MicroPython
+git clone git@github.com:marobo/micropython.git
 ```
 
-B. Move the downloaded ESP8266 firmware to this recently created directory.
+C. Create micropython virtualenv with python3
+```
+pyenv virtualenv 3.5.6 micropython
+```
+
+Set micropython to local version python to activate micropython
+```
+pyenv local micropython
+```
 
 > At this point: Connect the NodeMCU or ESP32 to your PC using the serial USB cable.
 
-C. Check where is the serial port that is being used by your device using the command, this is on ubuntu:
+D. Check where is the serial port that is being used by your device using the command, this is on ubuntu:
 
 ```
 ls /dev/tty.*
 ```
 
-D. Install *esptool* (tool used to flash/erase FW on devices)
+E. Install *esptool* (tool used to flash/erase FW on devices)
 
 ```
 pip install esptool
 ```
 
-E. Erase the NodeMCU flash:
+Erase the NodeMCU flash:
 
 ```
 esptool.py --port /dev/ttyUSB0 erase_flash
@@ -61,7 +76,7 @@ then run it again:
 esptool.py --port /dev/ttyUSB0 erase_flash
 ```
 
-F. Flash the new FW:
+Flash the new FW:
 
 ```
 esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 binary/esp8266-20180511-v1.9.4.bin
@@ -82,6 +97,8 @@ If you are at REPL, use:
 [Ctrl+A] [K] [Y] to quit and return to the terminal.
 
 \* REPL stands for “*Read Evaluate Print Loop”*, and is the name given to the interactive MicroPython prompt that you can access on the ESP8266. You can learn more about REPL [here](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/repl.html).
+
+
 
 #### 3. Installing Jupyter MicroPython Kernel
 
