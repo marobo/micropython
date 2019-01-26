@@ -50,7 +50,7 @@ D. Check where is the serial port that is being used by your device using the co
 ls /dev/tty.*
 ```
 
-E. Install *esptool* (tool used to flash/erase FW on devices)
+### 2. Install *esptool* (tool used to flash/erase FW on devices)
 
 ```
 pip install esptool
